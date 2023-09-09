@@ -1,0 +1,84 @@
+.slider {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: .3s;
+      opacity: 1;
+
+      &.sliderR{
+            right: -100%;
+            &.active{
+                  right: 0%;
+                  
+            }
+      }
+      &.sliderL{
+            left: -100%;
+            &.active{
+                  left: 0%;
+            }
+      }
+
+      .card {
+            cursor: pointer;
+            position: relative;
+            height: 435px;
+            min-width: 270px;
+            margin-right: 90px;
+
+            background: #fafafa;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            overflow: hidden;
+            opacity: 1;
+            
+            @media (max-width: 1279px) {
+                  margin-right: 40px;
+
+                  
+            }
+
+            &:hover {
+                  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+            }
+
+            &:hover .borderButton {
+                  background: #FDDCC4;
+                  border: 2px solid  #FDDCC4;
+            }
+
+            img {
+                  width: 270px;
+                  height: 270px;
+            }
+
+            .name {
+                  margin-top: 30px;
+                  font-family: "Georgia";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 23px;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  letter-spacing: 0.06em;
+                  color: #545454;
+            }
+
+            .borderButton {
+                  margin: 30px 0;
+                  width: 187px;
+                  height: 52px;
+                  border-radius: 100px;
+            }
+      }
+
+}

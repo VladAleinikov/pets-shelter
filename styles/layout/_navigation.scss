@@ -1,0 +1,129 @@
+.navMenu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: left;
+      position: absolute;
+      width: 443px;
+      height: 27px;
+      left: 797px;
+      top: 16px;
+      transition: 0.6s;
+
+      .logo {
+            display: none;
+      }
+      a {
+            position: relative;
+
+            width: min-content;
+
+            font-family: "Arial";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            white-space: nowrap;
+            color: #cdcdcd;
+            margin-right: 35px;
+
+            .petsPage & {
+                  color: #545454;
+            }
+            &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 0%;
+                  height: 3px;
+                  background: #f1cdb3;
+                  transition: 0.5s;
+            }
+            &.active::after {
+                  width: 100%;
+            }
+            &:hover::after {
+                  width: 100%;
+            }
+      }
+}
+@media (max-width: 1279px) {
+      .navMenu {
+            left: auto;
+            right: 0;
+      }
+}
+
+@media (max-width: 767px) {
+      .navMenu {
+            right: -100% !important;
+            top: 0 !important;
+            width: 243px;
+            height: 327px;
+            padding: calc((100vh - 327px) / 2) calc((320px - 243px) / 2);
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, 1fr);
+            opacity: 0;
+            background: #292929;
+            z-index: 9;
+
+            &.active {
+                  right: 0% !important;
+                  opacity: 1;
+            }
+
+            .logo {
+                  display: block;
+                  position: absolute;
+                  top: 30px;
+                  left: 10px;
+                  .title {
+                        font-family: "Georgia";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 110%;
+                        /* or 35px */
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.06em;
+
+                        /* color-primary */
+
+                        color: #f1cdb3;
+                        
+                  }
+                  .subTitle {
+                        font-family: "Arial";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 15px;
+                        /* identical to box height */
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.1em;
+
+                        /* color-light-xl */
+
+                        color: #ffffff;
+                  }
+                  &:hover::after {
+                              width: 0% !important;
+                        }
+            }
+            a {
+                  width: 100%;
+                  height: 51px;
+                  display: grid;
+                  justify-content: center;
+                  font-size: 32px;
+                  line-height: 160%;
+                  color: #fafafa !important;
+                  margin: 0;
+                  margin-bottom: 40px;
+            }
+      }
+}

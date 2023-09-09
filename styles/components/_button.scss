@@ -1,0 +1,51 @@
+.button {
+      cursor: pointer;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      background: #f1cdb3;
+      border-radius: 100px;
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+
+      color: #292929;
+      transition: 0.3s;
+      &:hover {
+            background: #fddcc4;
+      }
+}
+
+.borderButton {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #f1cdb3;
+
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+
+      color: #292929;
+      transition: 0.3s;
+      &:hover {
+            border: 2px solid #fddcc4;
+            background: #fddcc4;
+      }
+      &.disable {
+            cursor: default;
+            border: 2px solid #cdcdcd;
+
+            &:hover {
+                  background: none;
+            }
+      }
+}

@@ -1,0 +1,143 @@
+.petsSectionPetsPage {
+      height: 1342px;
+
+      background: #f6f6f6;
+      transition: 0.6s;
+      .petsContent {
+            height: 1162px;
+            padding: 80px 40px 100px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .heading {
+                  width: 400px;
+                  height: 90px;
+
+                  font-family: "Georgia";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 35px;
+                  line-height: 130%;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  letter-spacing: 0.06em;
+                  color: #545454;
+            }
+            .sliderContainer {
+                  position: relative;
+                  overflow: hidden;
+                  width: 100%;
+                  display: flex;
+                  height: 100%;
+
+                  .slider {
+                        height: 930px;
+                        width: 7440px;
+                        flex-flow: row wrap;
+
+                        justify-content: stretch;
+                        align-content: space-between;
+                        .card {
+                              left: 0px;
+                              margin: 15px 0;
+                              margin-right: 40px;
+                        }
+                  }
+            }
+
+            .navigationButtons {
+                  width: 340px;
+                  height: 52px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  .numPage {
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 100%;
+                        display: flex;
+
+                        justify-content: center;
+                        align-items: center;
+                        background: #f1cdb3;
+                        border-radius: 100px;
+                        font-family: "Georgia";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 17px;
+                        line-height: 130%;
+                        letter-spacing: 0.06em;
+
+                        color: #292929;
+                  }
+                  .buttonArrow {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 100%;
+                  }
+            }
+      }
+
+      @media (max-width: 1279px) {
+            height: 1733px;
+
+            .petsContent {
+                  height: 1598px;
+                  padding: 60px 40px 70px 40px;
+                  .heading {
+                        padding-top: 20px;
+                  }
+                  .sliderContainer {
+                        width: 580px;
+                        height: 1365px;
+                        .slider {
+                              width: 4960px;
+                              height: 1365px;
+                              align-content: space-between;
+                              margin-top: -5px;
+                        }
+                  }
+            }
+      }
+
+      @media (max-width: 767px) {
+            height: 1649px;
+            .petsContent {
+                  height: 1565px;
+                  padding: 42px 10px;
+                  .heading {
+                        width: 286px;
+                        height: 64px;
+                        padding: 0;
+                        font-size: 25px;
+                        text-align: center;
+                  }
+                  .sliderContainer {
+                        width: 270px;
+
+                        .slider {
+
+                              width: 4960px;
+                              flex-direction: column;
+                              margin-top: 0;
+                              justify-content: start;
+                              .card {
+                                    margin: 0;
+                                    margin-bottom: 30px;
+                                    margin-right: 40px;
+                                    left: 0px;
+                              }
+                              .card:nth-child(n + 3) {
+                                    margin-bottom: 0px;
+                              }
+                        }
+                  }
+                  .navigationButtons {
+                        width: 300px;
+                  }
+            }
+      }
+}

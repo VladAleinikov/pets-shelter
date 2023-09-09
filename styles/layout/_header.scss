@@ -1,0 +1,201 @@
+header {
+      position: absolute;
+      width: 1200px;
+      height: 60px;
+      padding: 0 40px;
+      padding-top: 60px;
+      overflow: hidden;
+      z-index: 2;
+
+      .bg{
+            display: none;
+      }
+      .logo {
+            cursor: pointer;
+            position: absolute;
+            width: 184px;
+            height: 60px;
+            left: 40px;
+            top: 60px;
+            .title {
+                  position: absolute;
+                  width: 184px;
+                  height: 35px;
+                  left: 0px;
+                  top: calc(50% - 35px / 2 - 12.5px);
+                  font-family: "Georgia";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 32px;
+                  line-height: 110%;
+                  white-space: nowrap;
+                  display: flex;
+                  align-items: center;
+                  letter-spacing: 0.06em;
+                  color: #f1cdb3;
+            }
+            .subTitle {
+                  position: absolute;
+                  width: 179px;
+                  height: 15px;
+                  left: 4px;
+                  top: calc(50% - 15px / 2 + 22.5px);
+                  font-family: "Arial";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 13px;
+                  line-height: 15px;
+                  white-space: nowrap;
+                  display: flex;
+                  align-items: center;
+                  letter-spacing: 0.1em;
+                  color: #ffffff;
+            }
+      }
+      .navMenu {
+            top: 76px;
+      }
+      &.petsPage {
+            height: 90px;
+            padding-top: 30px;
+            top: 0;
+            position: sticky;
+            .bg{
+                  display: block;
+                  position: absolute;
+                  left: -10px;
+                  top: -30px;
+                  width: calc(100% + 20px);
+                  height: 150px;
+                  background: #fff;
+            }
+            .logo {
+                  top: 30px;
+            }
+
+            .title {
+                  color: #545454;
+            }
+            .subTitle {
+                  color: #292929;
+            }
+            nav {
+                  top: 46px;
+            }
+      }
+
+      .burger {
+            display: none;
+      }
+      .modalNavBg {
+            display: none;
+      }
+}
+
+@media (max-width: 1279px) {
+      header {
+            padding: 0 30px;
+            padding-top: 30px;
+            width: calc(100% - 60px);
+            height: 60px;
+            .logo {
+                  top: 30px;
+                  left: 30px;
+            }
+            .navMenu {
+                  top: 46px;
+
+                  right: 30px;
+            }
+      }
+}
+
+@media (max-width: 767px) {
+      header {
+            position: absolute;
+            width: calc(100% - 20px);
+            height: 60px;
+            top: 0;
+            padding: 30px 10px 0 10px;
+            background: transparent;
+
+            transition: 0.6s;
+
+            
+
+            .logo {
+                  left: 10px;
+                  top: 30px;
+            }
+            .burger {
+                  z-index: 10;
+                  display: block;
+                  cursor: pointer;
+                  position: absolute;
+                  width: 30px;
+                  height: 30px;
+                  right: 53px;
+                  top: 45px;
+                  transform: rotate(0deg);
+                  transition: 0.6s;
+                  .line {
+                        position: absolute;
+                        width: 30px;
+                        height: 0px;
+                        left: 0px;
+                        border-top: 2px solid #f1cdb3;
+                  }
+                  .line:nth-child(1) {
+                        top: 4px;
+                  }
+                  .line:nth-child(2) {
+                        top: 14px;
+                  }
+                  .line:nth-child(3) {
+                        top: 24px;
+                  }
+
+                  &.active {
+                        transform: rotate(90deg);
+                  }
+            }
+
+            .modalNavBg {
+                  display: block;
+                  position: absolute !important;
+                  
+            }
+
+            .navMenu {
+                  top: 218px;
+            }
+            
+            &.active {
+
+                  height: 100vh;
+            }
+      }
+      header.petsPage {
+            margin-top: 0;
+            .burger {
+                  .line {
+                        border-top: 2px solid #545454;
+                  }
+                  &.active1 {
+                        .line {
+                              border-left: 2px solid #545454;
+                        }
+                  }
+            }
+            nav {
+                  top: 218px;
+            }
+            &.active{
+                  position: absolute;
+                  & ~ .petsSectionPetsPage{
+                        padding-top: 80px;
+                  }
+            }
+            
+      }
+}
